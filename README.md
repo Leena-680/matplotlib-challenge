@@ -1,4 +1,45 @@
-Files and/or folders in the repository
+## Module 5 - Matplotlib challenge  
+
+## Background  
+You've just joined Pymaceuticals, Inc., a new pharmaceutical company that specialises in anti-cancer medications.Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurringform of skin cancer.  
+As a senior data analyst at the company, you've been given access to the complete data from their most recentanimal study. In this study, 249 mice who were identifi ed with SCC tumours received treatment with a range ofdrug regimens. Over the course of 45 days, tumour development was observed and measured. The purpose of thisstudy was to compare the performance of Pymaceuticals’ drug of interest, Capomulin, against the other treatmentregimens.  
+The executive team has tasked you with generating all of the tables and fi gures needed for the technical report ofthe clinical study. They have also asked you for a top-level summary of the study results.  
+
+## Generate Summary Statistics
+Create a DataFrame of summary statistics. Remember, there is more than one method to produce the resultsyou're after, so the method you use is less important than the result.  
+Your summary statistics should include:  
+A row for each drug regimen. These regimen names should be contained in the index column.  
+A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of thetumour volume.  
+
+## Create Bar Charts and Pie Charts
+1. Generate two bar charts. Both charts should be identical and show the total total number of rows (MouseID/Timepoints) for each drug regimen throughout the study.
+Create the first bar chart with the Pandas DataFrame.plot() method.  
+Create the second bar chart with Matplotlib's pyplot methods.  
+
+2. Generate two pie charts. Both charts should be identical and show the distribution of female versus malemice in the study.  
+Create the first pie chart with the Pandas DataFrame.plot() method.  
+Create the second pie chart with Matplotlib's pyplot methods.
+
+## Calculate Quartiles, Find Outliers, and Create a Box Plot
+1. Calculate the final tumour volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin.  
+   Then, calculate the quartiles and IQR, and determine if thereare any potential outliers across all four treatment regimens. Use the following substeps:  
+   Create a grouped DataFrame that shows the last (greatest) time point for each mouse. Merge thisgrouped DataFrame with the original cleaned DataFrame.  
+   Create a list that holds the treatment names as well as a second, empty list to hold the tumour volumedata.  
+   Loop through each drug in the treatment list, locating the rows in the merged DataFrame that correspondto each treatment.   
+   Append the resulting fi nal tumour volumes for each drug to the empty list.   
+   Determine outliers by using the upper and lower bounds, and then print the results.  
+2. Using Matplotlib, generate a box plot that shows the distribution of the final tumour volume for all the mice ineach treatment group.
+   Highlight any potential outliers in the plot by changing their color and style. 
+
+## Create a Line Plot and a Scatter Plot
+1. Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus timepoint for that mouse.  
+2. Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulintreatment regimen.
+   
+## Calculate Correlation and Regression
+1. Calculate the correlation coeffi cient and linear regression model between mouse weight and averageobserved tumor volume for the entire Capomulin treatment regimen.  
+2. Plot the linear regression model on top of the previous scatter plot.  
+
+## Files and/or folders in the repository
 data
 Input files Mouse_metadata.csv and Study_results.csv are saved under this folder.
 
